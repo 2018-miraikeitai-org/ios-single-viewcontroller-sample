@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lzx-PC-0q3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="EYR-Nj-GIs">
+            <objects>
+                <viewController id="Lzx-PC-0q3" customClass="FirstViewController" customModule="ios_single_viewcontroller_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XcY-HJ-jQo"/>
+                        <viewControllerLayoutGuide type="bottom" id="68f-h4-Ss6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lSb-qV-sX9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b76-Q3-5S2">
+                                <rect key="frame" x="114" y="323" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtP-oY-O6a">
+                                <rect key="frame" x="55.5" y="426" width="263" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Modal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="modalViewController:" destination="Lzx-PC-0q3" eventType="touchUpInside" id="erV-XU-bbk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjz-JQ-rzu">
+                                <rect key="frame" x="56" y="506" width="263" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7Jx-dg-oAW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pushViewController:" destination="Lzx-PC-0q3" eventType="touchUpInside" id="8VW-TD-JYU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="68f-h4-Ss6" firstAttribute="top" secondItem="kjz-JQ-rzu" secondAttribute="bottom" multiplier="1.2" id="71o-hZ-BWl"/>
+                            <constraint firstItem="kjz-JQ-rzu" firstAttribute="centerX" secondItem="lSb-qV-sX9" secondAttribute="centerX" id="B0G-co-UAn"/>
+                            <constraint firstItem="kjz-JQ-rzu" firstAttribute="top" secondItem="GtP-oY-O6a" secondAttribute="bottom" constant="30" id="Gw7-mX-4b6"/>
+                            <constraint firstItem="GtP-oY-O6a" firstAttribute="centerX" secondItem="lSb-qV-sX9" secondAttribute="centerX" id="Qn4-va-44r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kjz-JQ-rzu" secondAttribute="trailing" constant="40" id="byY-jK-Xs5"/>
+                            <constraint firstItem="kjz-JQ-rzu" firstAttribute="height" secondItem="GtP-oY-O6a" secondAttribute="height" id="hKj-uQ-ssY"/>
+                            <constraint firstItem="b76-Q3-5S2" firstAttribute="centerX" secondItem="lSb-qV-sX9" secondAttribute="centerX" id="lau-Dq-AIp"/>
+                            <constraint firstItem="kjz-JQ-rzu" firstAttribute="width" secondItem="GtP-oY-O6a" secondAttribute="width" id="nfl-MO-7FM"/>
+                            <constraint firstItem="b76-Q3-5S2" firstAttribute="centerY" secondItem="lSb-qV-sX9" secondAttribute="centerY" id="rDd-Gq-TVU"/>
+                            <constraint firstItem="kjz-JQ-rzu" firstAttribute="leading" secondItem="lSb-qV-sX9" secondAttribute="leadingMargin" constant="40" id="tx4-n7-MMD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OY2-hW-U5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="61"/>
+        </scene>
+    </scenes>
+</document>
